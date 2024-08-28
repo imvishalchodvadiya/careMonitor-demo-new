@@ -1,0 +1,20 @@
+<form [formGroup]="form">
+    <mat-form-field>
+        <mat-label>Start Date:</mat-label>
+        <input matInput [matDatepicker]="startDate" formControlName="startDate">
+        <mat-datepicker-toggle matIconSuffix [for]="startDate"></mat-datepicker-toggle>
+        <mat-datepicker #startDate></mat-datepicker>
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label>End Date:</mat-label>
+        <input matInput [matDatepicker]="endDate" formControlName="endDate">
+        <mat-datepicker-toggle matIconSuffix [for]="endDate"></mat-datepicker-toggle>
+        <mat-datepicker #endDate></mat-datepicker>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+        <mat-label for="duration">Duration (days):</mat-label>
+        <input matInput id="duration" type="number" formControlName="duration">
+    </mat-form-field>
+  </form>
