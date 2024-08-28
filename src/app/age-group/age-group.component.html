@@ -1,0 +1,14 @@
+<form [formGroup]="form">
+    <label for="ageGroup">Age Group:</label>
+    <mat-form-field>
+      <select matNativeControl id="ageGroup" formControlName="ageGroup">
+        <option *ngFor="let group of ageGroups" [value]="group.value">{{ group.label }}</option>
+      </select>
+    </mat-form-field>
+    <label for="ageRange">Age Range:</label>
+    <mat-form-field>
+      <select matNativeControl id="ageRange" formControlName="ageRange">
+        <option *ngFor="let range of ageRanges | keyvalue" [value]="range.value">{{ range.value }}</option>
+      </select>
+  </mat-form-field>
+</form>
